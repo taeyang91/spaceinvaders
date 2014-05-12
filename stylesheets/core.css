@@ -1,0 +1,81 @@
+/* core.css */
+/* lean and simple css reset, based on Tantek Celik's reset - see comments below. */
+/* (c) 2004-2010 Tantek Ã?elik. Some Rights Reserved. http://tantek.com */
+/* This style sheet is licensed under a Creative Commons License.      */
+/*             http://creativecommons.org/licenses/by/2.0              */
+
+/* Purpose: undo some of the default styling of common browsers        */
+
+
+:link,:visited,ins { text-decoration:none }
+nav ul,nav ol { list-style:none }
+dl,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+html,body,pre,p,blockquote,
+form,fieldset,input,label
+{ margin:0; padding:0 }
+abbr, img, object,
+a img,:link img,:visited img,
+a object,:link object,:visited object
+{ border:0 }
+address,abbr { font-style:normal }
+iframe:not(.auto-link) { display:none ! important; visibility:hidden ! important; margin-left: -10000px ! important  }
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: underline;
+}
+
+
+body, html {
+	color: white;
+	width: 100%;
+	height: 100%;
+
+	font-size: 16px;
+	font-family: serif;
+
+	
+	background-image: url('../images/bgBody.gif');
+
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+#content {
+	/* margin-bottom: -50px; */
+}
+
+footer {
+	margin-top: 10px;
+	color: #fafafa;
+	text-shadow: 1px 1px 1px #000;
+	width: 100%;	
+	background: rgba(22,22,22, 0.5);
+	border-top: black solid thin;
+	/*opacity: 0.5;*/
+	line-height: 50px;
+}
+
+canvas {
+	border: thin solid black;
+	background-image: url('../images/bgCanvas.jpg');
+}
+
+button {
+	text-shadow: 1px 1px 1px #000;
+	color: black;
+	width: 20%;	
+	font-size: 40px;
+	font-weight: bold;
+}
+

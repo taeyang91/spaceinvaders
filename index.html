@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/core.css"/>
+</head>
+<body>
+    <div id='c2' align="center">
+        <canvas id='canvas' width=900px height=500px></canvas>
+        <menu>
+            <button class="start">Start</button>
+            <button class="pause">Pause</button>
+            <button class="help">Help</button>
+        </menu>
+    </div> 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src='javascript/player.js'></script>
+    <script src='javascript/playerMissile.js'></script>
+    <script src='javascript/invader.js'></script>
+    <script src='javascript/invaderMissile.js'></script>
+    <script src='javascript/main.js'></script>
+    <script>
+        $(function() {
+        	$(".help").click(function() {
+        		alert("<--: move left\n-->: move right\nup: fire missile");
+        	})
+            $(".start").click(function() {
+                game = new Game();
+                game.setup();
+            })
+            $(".pause").click(function() {
+            
+            if (game.status == "pause") {
+                game.status = "playing";
+                $(this).html("Pause");
+            } else if (game.status == "playing"){
+                game.status = "pause";
+                $(this).html("Resume");
+            }
+          })
+        });
+        var chance = 0.001;
+        var leftKey = false;
+        var rightKey = false;
+        var upKey = false;
+        var intervalBool = false;
+        var game = new Game();
+    </script>
+</body>
+</html>
